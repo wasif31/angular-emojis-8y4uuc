@@ -32,7 +32,7 @@ export class AppComponent {
     happy: "&#x1f600"
   };
 
-  re = /([0-9A-Za-z'\&\-\.\/\(\)=:;]+)|((?::|;|=)(?:-)?(?:\)|D|P))/g;
+  re = /[0-9A-Za-z'\&\-\.\/]+/g;
   text =
     "I was like :joy: and she was like :happy: and we ware like :shades: and :-) :) ";
   set = "twitter";
