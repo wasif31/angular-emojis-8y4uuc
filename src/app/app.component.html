@@ -1,0 +1,16 @@
+<hello name="{{ name }}"></hello>
+<p>
+	Start editing to see some magic happen :)
+</p>
+<!--https://ngx-emoji-mart.netlify.com/
+https://pusher.com/tutorials/emoji-gifs-link-previews-angular-chatroom#add-an-emoji-picker-to-the-room
+-->
+
+
+<input placeholder="Type a message. Hit Enter to send" type="text" (blur)="onBlur()" (focus)="onFocus()"
+            name="message" [(ngModel)]="message"> <button (click) ="toggleEmojiPicker()"> 😀</button><br>
+<emoji-mart class="emoji-mart" set="{{set}}" *ngIf="showEmojiPicker" (emojiSelect)="addEmoji($event)"
+	title="Pick your emoji…"></emoji-mart>
+{{ message }}
+<button (click)="emojiIt()">Click Me</button>,<br>
+{{text}}
